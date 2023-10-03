@@ -1,0 +1,27 @@
+/* .cardcontainer{
+    width: 300%;
+    height: 400px;
+    overflow: auto;
+} */
+.cardcontainer:hover{
+    -webkit-box-shadow: -44px 35px 103px -9px rgba(0,153,255,0.77);
+-moz-box-shadow: -44px 35px 103px -9px rgba(0,153,255,0.77);
+box-shadow: -44px 35px 103px -9px rgba(0,153,255,0.77);
+    
+}
+/* @media screen and  (max-width:1200px) {
+    .cardcontainer{
+        width: 300%;
+        height: 400px;
+        
+    }
+    
+}
+@media screen and (max-width:600px) {
+    .cardcontainer{
+        width: 300%;
+        height: 400px;
+        font-size: 12px;
+        
+    }
+     */
