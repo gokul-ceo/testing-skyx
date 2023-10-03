@@ -1,15 +1,15 @@
 import styles from '../../../styles/components/contactsection.module.css'
-export const ContactSection=()=>{
+export const ContactSection=(props:any)=>{
     return <>
-    <div className={styles.contactsectioncontainer}>
+    <div id='contactUs' className={styles.contactsectioncontainer}>
         <div className="row p-5">
             <div className="text-center">
                 <h3 className='text-light'>Contact Us!</h3>
             </div>
-            <div  className="col-lg-6 col-md-4 col-sm-12 p-5">
+            <div  className="col-lg-7 col-md-4 col-sm-12">
             <iframe className={styles.iframe} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2460.7269852037202!2d78.2002169447519!3d12.523080661564752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac35a6dc074d97%3A0xa7765b176b3e6aba!2sSkyX%20Digi%20Solutions!5e0!3m2!1sen!2sin!4v1696307209513!5m2!1sen!2sin" width="600" height="450" style={{"border":"0"}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div className="col-lg-6 col-md-4 col-sm-12 p-5 text-light d-flex flex-column justify-content-space-between align-items-start">
+            <div className="col-lg-5 mt-3 col-md-4 col-sm-12  text-light d-flex flex-column justify-content-space-between align-items-start">
                 <div className='m-0 m-auto'>
                 <div className='d-flex  align-items-center'>
                 <div className='bg-light rounded-circle p-1 me-4'>

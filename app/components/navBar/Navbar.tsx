@@ -1,6 +1,7 @@
 import Image from "next/image"
 import styles from '../../styles/page.module.css';
 import skydigi_logo from '../../assets/skyx_logo.png';
+import Link from "next/link";
 
 export const NavBar=()=>{
     return <>
@@ -15,16 +16,16 @@ export const NavBar=()=>{
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link active fs-5" aria-current="page" href="#">Home</a>
+          <Link className="nav-link active fs-5" aria-current="page" href="#hero">Home</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link fs-5" href="#">About us</a>
+          <Link className="nav-link fs-5" href="#aboutUs">About us</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link fs-5" >Services</a>
+          <Link className="nav-link fs-5" href="#services" >Services</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link fs-5">Careers</a>
+          <Link className="nav-link fs-5" href="#joinUs">Careers</Link>
         </li>
       </ul>
       

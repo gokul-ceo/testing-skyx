@@ -7,6 +7,9 @@ li:hover{
     color: #0099FF;
 }
 
+a{
+  text-decoration: none;
+}
 /* cta button - nav */
 
 
@@ -88,5 +91,29 @@ li:hover{
     100%{
       transform: scale(0.8);
     }
+  }
+  
+  .back-to-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: red;
+    display: none;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  
+  /* Show the button when the page is scrolled down */
+  body.scrolled .back-to-top-button {
+    display: block;
+  }
+  
+  /* Fade in the button */
+  body.scrolled .back-to-top-button {
+    opacity: 1;
   }
   

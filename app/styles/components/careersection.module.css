@@ -52,8 +52,19 @@
     fill: #06f;
   }
   
+  .svgelement{
+    width: 400;
+    height: 400;
+  }
+  
   @media (min-width: 768px) {
     .ctabutton {
       min-width: 170px;
     }
   }
+  @media screen and (max-width: 991px){
+    .svgelement{
+      width: 300px;
+      height: 300px;
+    }
+}

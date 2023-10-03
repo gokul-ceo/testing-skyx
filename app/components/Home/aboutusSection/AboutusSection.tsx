@@ -1,21 +1,9 @@
 import styles from '../../../styles/components/aboutussection.module.css'
 import gif from '../../../assets/Animation - 1696261918537.gif';
 import Image from 'next/image';
-function Accordion({ id, title, content, isOpen, toggleAccordion }:any) {
-    return (
-      <div className={styles.accordion}>
-        <button onClick={() => toggleAccordion(id)}>{title}</button>
-        {isOpen && (
-          <div className="content">
-            {content}
-          </div>
-        )}
-      </div>
-    );
-  }
-export const AboutUsSection = ()=>{
+export const AboutUsSection = (props:any)=>{
     return<>
-    <div className={styles.aboutUsContainer}>
+    <div id="aboutUs" className={styles.aboutUsContainer}>
         <div className='text-center'>
         <h2>About us</h2>
         </div>

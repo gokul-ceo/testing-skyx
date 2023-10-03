@@ -5,9 +5,9 @@ import wd from '../../../assets/development.png';  //web development image
 import bs from '../../../assets/invoice.png'; //billing software image
 import hs from '../../../assets/administrator.png';  //hardware support image
 
-export const ServiceSection = () => {
+export const ServiceSection = (props:any) => {
     return (
-        <div>
+        <div id='services'>
             <div className="text-center">
                 <h2>Services</h2>
             </div>
