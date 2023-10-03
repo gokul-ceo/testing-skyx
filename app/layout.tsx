@@ -87,7 +87,6 @@ India</p>
         <div style={{backgroundColor:'#0099FF'}} className='text-start m-2 p-4 text-light'>
           <small>©{new Date().getFullYear()}.| <strong>www.skyxdigisolutions.com.</strong> All Rights Reserved.</small>
         </div>
-        <button role="button" > Top </button>
         </body>
     </html>
   )
