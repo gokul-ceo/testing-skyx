@@ -4,7 +4,7 @@ import Image from 'next/image';
 export const AboutUsSection = (props:any)=>{
     return<>
     <div id="aboutUs" className={styles.aboutUsContainer}>
-        <div className='text-center'>
+        <div className='text-center mt-2'>
         <h2>About us</h2>
         </div>
         <div className='row'>
