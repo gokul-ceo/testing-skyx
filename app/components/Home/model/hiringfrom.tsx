@@ -28,9 +28,10 @@ export const CareerFormComponent = ({show,onclose}:any)=>{
       </Form.Group>
       <label htmlFor='dropdwn-basic-button' className='form-label'>Choose your positions to apply.</label>
       <DropdownButton id="dropdown-basic-button" title="Select Positions">
-      <Dropdown.Item>Position-1</Dropdown.Item>
-      <Dropdown.Item>Position-2</Dropdown.Item>
-      <Dropdown.Item>Position-3</Dropdown.Item>
+      <Dropdown.Item>Senior Web Developer - Experience: 3+ Years</Dropdown.Item>
+      <Dropdown.Item>Junior Web Developer - Experience: 0 - 2 Years</Dropdown.Item>
+      <Dropdown.Item>Marketing Manager - Experience: 3+ Years</Dropdown.Item>
+      <Dropdown.Item>Marketing Executive - Experience: 0-2 Years</Dropdown.Item>
     </DropdownButton>
   <label className="form-label mt-3" >Upload your resume/cv</label>
     <div className="input-group  mb-3">
