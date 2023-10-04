@@ -2,7 +2,7 @@ import styles from '../../../styles/components/contactsection.module.css'
 export const ContactSection=(props:any)=>{
     return <>
     <div id='contactUs' className={styles.contactsectioncontainer}>
-        <div className="row p-5">
+        <div className="row p-5 w-100">
             <div className="text-center">
                 <h3 className='text-light'>Contact Us!</h3>
             </div>

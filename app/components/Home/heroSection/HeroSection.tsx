@@ -8,8 +8,8 @@ export const HeroSection = (props:any)=>{
         setshowform(false);
     }
     return <>
-    <div id="hero" className={`container w-100${styles.herocontainer}`}>
-        <div className="row d-flex justify-content-center"> 
+    <div id="hero" className={`${styles.herocontainer}`}>
+        <div className="row w-100"> 
         <div style={{zIndex:'1'}} className="col-lg-7 col-sm-12 d-flex align-items-center justify-content-center p-5 flex-column text-center">
             <h2 className='fs-2'>Promote your business to next level!</h2>
             <p className='fs-4'>Our team is committed to meeting your company&apos;s specific needs and helping you to achieve your digital marketing goals.</p>

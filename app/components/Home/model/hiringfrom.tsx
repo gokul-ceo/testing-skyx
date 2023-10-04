@@ -9,7 +9,7 @@ export const CareerFormComponent = ({show,onclose}:any)=>{
     return <>
           <Modal show={show} onHide={onclose}>
         <Modal.Header closeButton>
-          <Modal.Title>Enquire Form</Modal.Title>
+          <Modal.Title>Application Form</Modal.Title>
         </Modal.Header>
         <Modal.Body>
         <Form>
@@ -32,6 +32,10 @@ export const CareerFormComponent = ({show,onclose}:any)=>{
       <Dropdown.Item>Position-2</Dropdown.Item>
       <Dropdown.Item>Position-3</Dropdown.Item>
     </DropdownButton>
+  <label className="form-label mt-3" >Upload your resume/cv</label>
+    <div className="input-group  mb-3">
+  <input type="file" className="form-control" id="inputGroupFile01"/>
+</div>
 
     </Form>
         </Modal.Body>
