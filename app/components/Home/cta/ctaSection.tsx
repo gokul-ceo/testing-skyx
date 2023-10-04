@@ -1,5 +1,12 @@
+'use client'
+import { useState } from 'react';
 import styles from '../../../styles/components/ctasection.module.css'
+import { BusinessFormComponent } from '../model/businessform';
 export const CtaSection=()=>{
+    const [showform,setshowform] = useState<boolean>(false);
+    const handleClose = ()=>{
+        setshowform(false);
+    }
     return <>
     <div className='d-flex justify-content-center align-items-center m-0 p-0'>
     <div className={`container  ${styles.ctacontainer}`}>
@@ -11,11 +18,11 @@ export const CtaSection=()=>{
                 <div className="col-md-8 col-sm-12 d-flex flex-column justify-content-center align-items-center ">
                     <h3 style={{color:'#0099FF'}} className=''>Unlock Your Digital Potential with Sky X Digi Solutions</h3>
                     <p className=''>We&apos;re ready to propel your online success to new heights. Let&apos;s take the first step towards achieving your digital goals together.</p>
-                    <button style={{backgroundColor:'#0099FF',color:'whitesmoke'}} className='btn mb-4  btn-lg'>Ready to Start?</button>
+                    <button style={{backgroundColor:'#0099FF',color:'whitesmoke'}} className='btn mb-4  btn-lg' onClick={()=>setshowform(true)}>Ready to Start?</button>
                 </div>
             </div>
         </div>
-
+        <BusinessFormComponent show={showform} onclose={handleClose} />
     </div>
     </>
 }

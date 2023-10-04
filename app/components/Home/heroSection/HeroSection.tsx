@@ -1,14 +1,20 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import styles from '../../../styles/components/homesection.module.css'
+import { BusinessFormComponent } from '../model/businessform';
 export const HeroSection = (props:any)=>{
+    const [showform,setshowform] = useState<boolean>(false);
+    const handleClose = ()=>{
+        setshowform(false);
+    }
     return <>
-    <div id="hero" className={styles.herocontainer}>
+    <div id="hero" className={`container w-100${styles.herocontainer}`}>
         <div className="row d-flex justify-content-center"> 
         <div style={{zIndex:'1'}} className="col-lg-7 col-sm-12 d-flex align-items-center justify-content-center p-5 flex-column text-center">
             <h2 className='fs-2'>Promote your business to next level!</h2>
             <p className='fs-4'>Our team is committed to meeting your company&apos;s specific needs and helping you to achieve your digital marketing goals.</p>
             
-            <button className={styles.ctabutton} role="button">Grow your business now</button>
+            <button className={styles.ctabutton} role="button" onClick={()=>{setshowform(true)}}>Grow your business now</button>
         </div>
         <div className="col-lg-auto d-none d-lg-block">
             <div className={styles.herocontainersvg}>
@@ -22,6 +28,7 @@ export const HeroSection = (props:any)=>{
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fillOpacity="1" d="M0,128L24,133.3C48,139,96,149,144,170.7C192,192,240,224,288,229.3C336,235,384,213,432,208C480,203,528,213,576,218.7C624,224,672,224,720,234.7C768,245,816,267,864,261.3C912,256,960,224,1008,192C1056,160,1104,128,1152,122.7C1200,117,1248,139,1296,165.3C1344,192,1392,224,1416,240L1440,256L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path></svg>
 
         </div>
+        <BusinessFormComponent show={showform} onclose={handleClose} />
     </div>
     </>
 }
