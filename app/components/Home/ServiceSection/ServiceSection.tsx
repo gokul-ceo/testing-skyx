@@ -4,10 +4,12 @@ import dm from '../../../assets/social-media.png'; //digital marketing image
 import wd from '../../../assets/development.png';  //web development image
 import bs from '../../../assets/invoice.png'; //billing software image
 import hs from '../../../assets/administrator.png';  //hardware support image
+import c from '../../../assets/security-camera.png'; //security camera image
+import cc from '../../../assets/live-chat.png'; //call center image
 
 export const ServiceSection = (props:any) => {
     return (
-        <div id='services'>
+        <div className="service-container" id='services'>
             <div className="text-center">
                 <h2>Services</h2>
             </div>
@@ -46,6 +48,24 @@ export const ServiceSection = (props:any) => {
                             <div className="card-body">
                                 <h5 className="card-title">IT Hardware Support</h5>
                                 <p className="card-text">We meet your IT needs affordably, providing prompt support and genuine products.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-lg-3">
+                        <div className="cardcontainer card p-3 m-2">
+                            <Image src={c} height={64} width={64} alt="cctv_installation"/>
+                            <div className="card-body">
+                                <h5 className="card-title">CCTV Installation</h5>
+                                <p className="card-text">Customized and Affordable CCTV Installation Services Catered to Your Unique Security Requirements.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-lg-3">
+                        <div className="cardcontainer card p-3 m-2">
+                            <Image src={cc} height={64} width={64} alt="call_center"/>
+                            <div className="card-body">
+                                <h5 className="card-title">Call Center Services</h5>
+                                <p className="card-text">Empowering Your Business with Exceptional Call Center Services</p>
                             </div>
                         </div>
                     </div>

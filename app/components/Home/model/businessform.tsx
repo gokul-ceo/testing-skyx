@@ -1,5 +1,3 @@
-'use client'
-import { submitenquire } from '@/app/api/submitenquire';
 import { HtmlHTMLAttributes, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
@@ -41,13 +39,40 @@ export const BusinessFormComponent = ({show,onclose}:any)=>{
     //     }
     // }
     
+    const handlesubmit = (formdata:FormData)=>{
+      const name = formdata.get('username');
+      const email = formdata.get('email');
+      const number = formdata.get('number');
+      const message = formdata.get('message');
+       const obj = {
+        name,email,number,message
+       }  
+      console.log("Data submitted: ",obj)
+      fetch('https://script.google.com/macros/s/AKfycbxRyG0l7bcyWKN_Qv7iSWppTuYrReX6NM0Dbr0csAhZqnsImgaNQfcOibkFXbLxrm5e/exec', {
+        redirect: "follow",
+        method: 'POST',
+        mode:'no-cors',
+        body: JSON.stringify(formdata),
+})
+  .then((response) => {
+    if(response.ok){
+      console.log("Data submitted successfully")
+    }else{
+      console.log("Data not submitted successfully")
+    }
+  })
+
+  .catch((error) => {
+    console.error('Error sending data to Google Sheets:', error);
+  });
+    }
     return <>
           <Modal show={show} onHide={onclose}>
         <Modal.Header closeButton>
           <Modal.Title>Enquire Form</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <Form action={submitenquire}>
+        <Form action={handlesubmit}>
       <Form.Group className="mb-3" controlId="Name">
         <Form.Label>Name</Form.Label>
         <input  className="form-control form-control" name='username' type="text" placeholder="Enter name" aria-label="name"/>
