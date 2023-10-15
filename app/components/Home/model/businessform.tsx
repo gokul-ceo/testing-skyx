@@ -69,29 +69,15 @@ export const BusinessFormComponent = ({show,onclose}:any)=>{
     return <>
           <Modal show={show} onHide={onclose}>
         <Modal.Header closeButton>
-          <Modal.Title>Enquire Form</Modal.Title>
+          <Modal.Title>Enquire Us</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <Form action={handlesubmit}>
-      <Form.Group className="mb-3" controlId="Name">
-        <Form.Label>Name</Form.Label>
-        <input  className="form-control form-control" name='username' type="text" placeholder="Enter name" aria-label="name"/>
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <input name='email' className='form-control' aria-label="email"  type="email" placeholder="Enter email" />
-      </Form.Group>
-
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Mobile Number</Form.Label>
-        <input name='number'  className='form-control' aria-label="number"  type="number" placeholder="Enter mobile number" />
-      </Form.Group>
-      <label htmlFor="enquirereason" className="form-label">Message</label>
-  <textarea  name='message'  className='form-control' aria-label="message"  id="enquirereason" rows={3}></textarea>
-      <Button  className='mt-2' variant="primary" type="submit">
-        Submit
-      </Button>
-    </Form>
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSe45Tz6RPK7BeaHJ2IEDQ-k7R3RLz29cwfpZS6NRXjFgjHvKw/viewform?embedded=true"
+            title="Contact Form"
+            width="100%"
+            height="500"
+          >Loading</iframe>
         </Modal.Body>
       </Modal>
     </>
